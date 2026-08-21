@@ -1,4 +1,4 @@
-// --- Game Data Aligned to 8th Grade Unit 1 Assessment (Original Texts) ---
+// --- Game Data Aligned to 8th Grade Unit 1 Reading Skills ---
 const GAME_DATA = [
   {
     level: 1,
@@ -12,7 +12,8 @@ const GAME_DATA = [
       "Visualize a boat tied up at a quiet harbor dock to understand what calm seas look like."
     ],
     correct: 1,
-    explanation: "Annotating the physical action of clutching the gunwale until knuckles ache reveals the narrator's intense fear[cite: 2]. The grandfather asks his question in response to seeing that physical tension during the rough ride[cite: 2]."
+    correctRationale: "Great reading move! Annotating the narrator's physical reaction ('knuckles ache') shows their intense fear. The grandfather asks his question specifically because he notices that fear during the rough sail.",
+    incorrectRationale: "Not quite. Option A and D rely on outside facts or calm visuals that ignore the current action. Option C focuses on sound/rhyme rather than meaning. Annotating the narrator's physical reaction (knuckles aching) reveals the fear that prompted the grandfather's question."
   },
   {
     level: 2,
@@ -26,7 +27,8 @@ const GAME_DATA = [
       "'committee,' 'review board,' and 'chairperson'"
     ],
     correct: 1,
-    explanation: "'Resolute' means admirably purposeful, determined, and unwavering[cite: 2]. Words like 'stood my ground,' 'refused to yield,' and 'defended every brushstroke' directly illustrate that firm determination[cite: 2]."
+    correctRationale: "Spot on! 'Resolute' means determined and unwavering. Words like 'stood my ground,' 'refused to yield,' and 'defended' show that firm, unyielding attitude in action.",
+    incorrectRationale: "Look closer at the character's actions. Options A and D just list nouns (objects/people), and Option C shows the board's reaction. Option B contains the active verbs ('stood my ground,' 'refused to yield') that show what being 'resolute' actually looks like."
   },
   {
     level: 3,
@@ -40,7 +42,8 @@ const GAME_DATA = [
       "Definition 4"
     ],
     correct: 1,
-    explanation: "In this context, 'seasoned' describes someone who has gained experience and capability by working through difficult challenges (Definition 2)[cite: 2]."
+    correctRationale: "Excellent analysis! In this context, 'seasoned' describes someone who has gained experience and maturity through practice and overcoming obstacles (Definition 2).",
+    incorrectRationale: "Pay attention to how the word describes the person. Definitions 1, 3, and 4 apply to physical materials (wood or food). Definition 2 is correct because the stage manager gained maturity and experience by solving problems."
   },
   {
     level: 4,
@@ -54,7 +57,8 @@ const GAME_DATA = [
       "The narrator decided to sign up for a mountain expedition."
     ],
     correct: 2,
-    explanation: "Option C directly highlights the real, unexpected hardship (ruined gear and broken boots miles from camp) that taught the narrator the true meaning of endurance[cite: 2]."
+    correctRationale: "You nailed it! Option C directly highlights the real, unexpected hardship (soaked gear and destroyed boots miles from safety) that taught the narrator what endurance actually means.",
+    incorrectRationale: "Check which option shows an actual unexpected hardship. Options A, B, and D show planned preparation or expectations. Option C is the only detail describing the real-world struggle that forced the narrator to grow."
   },
   {
     level: 5,
@@ -66,7 +70,8 @@ const GAME_DATA = [
       "Sentence Fragment"
     ],
     correct: 1,
-    explanation: "This is a Sentence Fragment[cite: 2]. Although it contains action words ('trudging'), it lacks a clear subject performing the main action (e.g., 'We were trudging...') to form a complete thought[cite: 2]."
+    correctRationale: "Correct! This is a Sentence Fragment. It contains an action word ('trudging'), but it lacks a subject linked to a main predicate (e.g., 'I was trudging...') to express a complete thought.",
+    incorrectRationale: "Be careful with action words! While 'trudging' looks like a verb, this line lacks a subject performing the verb (e.g., 'We were trudging...'). Because it cannot stand alone as a complete thought, it is a Sentence Fragment."
   }
 ];
 
@@ -74,7 +79,7 @@ let currentLevelIndex = 0;
 let score = 0;
 let lives = 3;
 let timer = null;
-let timeLeft = 30;
+let timeLeft = 60;
 
 // --- DOM Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,7 +111,7 @@ function loadQuestion() {
   }
 
   const data = GAME_DATA[currentLevelIndex];
-  timeLeft = 30;
+  timeLeft = 60;
 
   container.innerHTML = `
     <!-- HUD -->
@@ -186,7 +191,7 @@ function selectOption(selectedIndex) {
     feedbackArea.innerHTML = `
       <div class="cq-feedback correct">
         <div class="cq-feedback-head">✓ Correct Strategy!</div>
-        <p>${data.explanation}</p>
+        <p><b>Why it works:</b> ${data.correctRationale}</p>
         <button class="cq-btn cq-next-btn" onclick="nextQuestion()">Next Level →</button>
       </div>
     `;
@@ -195,23 +200,16 @@ function selectOption(selectedIndex) {
     buttons[selectedIndex].classList.add('wrong');
     buttons[data.correct].classList.add('correct');
 
-    if (lives <= 0) {
-      feedbackArea.innerHTML = `
-        <div class="cq-feedback wrong">
-          <div class="cq-feedback-head">✗ Incorrect</div>
-          <p><b>Rationale:</b> ${data.explanation}</p>
-          <button class="cq-btn cq-next-btn" onclick="showEndScreen(false)">Game Over</button>
-        </div>
-      `;
-    } else {
-      feedbackArea.innerHTML = `
-        <div class="cq-feedback wrong">
-          <div class="cq-feedback-head">✗ Incorrect</div>
-          <p><b>Rationale:</b> ${data.explanation}</p>
-          <button class="cq-btn cq-next-btn" onclick="nextQuestion()">Continue →</button>
-        </div>
-      `;
-    }
+    const nextAction = lives <= 0 ? "showEndScreen(false)" : "nextQuestion()";
+    const buttonText = lives <= 0 ? "View Results" : "Continue →";
+
+    feedbackArea.innerHTML = `
+      <div class="cq-feedback wrong">
+        <div class="cq-feedback-head">✗ Strategy Check</div>
+        <p><b>Rationale:</b> ${data.incorrectRationale}</p>
+        <button class="cq-btn cq-next-btn" onclick="${nextAction}">${buttonText}</button>
+      </div>
+    `;
   }
 
   if (window.lucide) {
@@ -228,23 +226,16 @@ function handleTimeout() {
   buttons.forEach(btn => btn.disabled = true);
   buttons[data.correct].classList.add('correct');
 
-  if (lives <= 0) {
-    feedbackArea.innerHTML = `
-      <div class="cq-feedback wrong">
-        <div class="cq-feedback-head">⏰ Time's Up!</div>
-        <p><b>Rationale:</b> ${data.explanation}</p>
-        <button class="cq-btn cq-next-btn" onclick="showEndScreen(false)">Game Over</button>
-      </div>
-    `;
-  } else {
-    feedbackArea.innerHTML = `
-      <div class="cq-feedback wrong">
-        <div class="cq-feedback-head">⏰ Time's Up!</div>
-        <p><b>Rationale:</b> ${data.explanation}</p>
-        <button class="cq-btn cq-next-btn" onclick="nextQuestion()">Continue →</button>
-      </div>
-    `;
-  }
+  const nextAction = lives <= 0 ? "showEndScreen(false)" : "nextQuestion()";
+  const buttonText = lives <= 0 ? "View Results" : "Continue →";
+
+  feedbackArea.innerHTML = `
+    <div class="cq-feedback wrong">
+      <div class="cq-feedback-head">⏰ Time's Up!</div>
+      <p><b>Rationale:</b> ${data.incorrectRationale}</p>
+      <button class="cq-btn cq-next-btn" onclick="${nextAction}">${buttonText}</button>
+    </div>
+  `;
 
   if (window.lucide) {
     lucide.createIcons();
@@ -262,15 +253,29 @@ function showEndScreen(won) {
   if (!container) return;
 
   const title = won ? "QUEST COMPLETE!" : "GAME OVER";
-  const sub = won ? "Mastery achieved across all Unit 1 reading skill modules!" : "Review the reading adjustment strategies and try again.";
+  const sub = won ? "You successfully applied key reading strategies across all levels!" : "Review your strategies and give it another shot.";
 
   container.innerHTML = `
     <div class="cq-center">
       <h1 class="cq-title cq-pixel">${title}</h1>
       <p class="cq-sub">${sub}</p>
       
-      <div class="cq-tier">
+      <div class="cq-tier" style="margin-bottom: 20px;">
         Final Score: <b>${score} Points</b>
+      </div>
+
+      <!-- Post-Game Skill Reflection Module -->
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 20px; text-align: left; max-width: 600px; margin: 0 auto 25px auto;">
+        <h3 style="color: #5CE7DE; margin-top: 0; margin-bottom: 12px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+          🧠 Reading Skill Reflection Checklist
+        </h3>
+        <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">Before taking your assessment, review these key reading moves:</p>
+        <ul style="font-size: 0.9rem; line-height: 1.6; color: #eee; padding-left: 20px; margin-bottom: 0;">
+          <li><b>When confused by poetry:</b> Annotate physical actions or character reactions to reveal emotional context.</li>
+          <li><b>For context clues:</b> Highlight action verbs in surrounding sentences to see what the word looks like in practice.</li>
+          <li><b>For dictionary definitions:</b> Match the definition to whether the word describes a <i>person</i>, an <i>object</i>, or a <i>metaphor</i>.</li>
+          <li><b>For textual evidence:</b> Choose the detail that directly causes character growth, not just background facts.</li>
+        </ul>
       </div>
 
       <button class="cq-btn" onclick="location.reload()">
