@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comprehension Quest</title>
-<!-- Tailwind CSS CDN -->
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Google Fonts -->
@@ -19,7 +20,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div className="cq-wrap" id="app"></div>
-  <script src="script.js"></script>
+
+  <div class="cq-wrap">
+    
+    <!-- Start Screen -->
+    <div id="start-screen" class="cq-start">
+      <h1 class="cq-title cq-pixel">COMPREHENSION<br>QUEST</h1>
+      <p class="cq-sub">Unit 1 Reading Skills Review · ADV Level</p>
+
+      <div class="cq-levels-preview">
+        <div class="cq-lvl-card">
+          <b>LV.1 — Fix the Confusion</b>
+          <p>Adjusting when meaning breaks down</p>
+        </div>
+        <div class="cq-lvl-card">
+          <b>LV.2 — Word Detective</b>
+          <p>Word meaning & context clues</p>
+        </div>
+        <div class="cq-lvl-card">
+          <b>LV.3 — Dictionary Dash</b>
+          <p>Choosing the right definition</p>
+        </div>
+        <div class="cq-lvl-card">
+          <b>LV.4 — Evidence Hunt</b>
+          <p>Best textual evidence & inference</p>
+        </div>
+        <div class="cq-lvl-card">
+          <b>LV.5 — Sentence Sort</b>
+          <p>Complete sentence or fragment?</p>
+        </div>
+      </div>
+
+      <button class="cq-btn">
+        <i data-lucide="play"></i> START GAME
+      </button>
+
+      <p class="cq-sub" style="margin-top: 24px; font-size: 12px;">
+        5 levels · read closely, answer fast, chain correct answers for bonus points.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
 </body>
 </html>
