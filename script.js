@@ -1,38 +1,38 @@
-// --- Game State & Questions Data ---
+// --- Game Data Aligned to 8th Grade Unit 1 Assessment ---
 const GAME_DATA = [
   {
     level: 1,
-    title: "LV.1 — Fix the Confusion",
-    passage: "The arctic fox adapts to severe cold using thick fur and countercurrent heat exchange in its paws. When deep snow covers the ground, tracking prey becomes exceedingly difficult, forcing the fox to rely heavily on its extraordinary hearing rather than sight.",
-    question: "When meaning breaks down in a complex passage, which strategy best helps fix confusion about how the fox hunts in deep snow?",
+    title: "LV.1 — Fix the Confusion (Poetry Adjustment)",
+    passage: "My uncle drives the backroads like he's outrunning time itself—flooring the pedal through every straightaway, slamming the brakes at every bend, never holding a steady speed.\n\nWhen you grip the door handle until your knuckles turn white, he just laughs and asks, 'Who told you life was supposed to be a smooth ride?'",
+    question: "A reader is confused by the uncle's final question. Which adjustment strategy BEST helps the reader understand why the uncle asks this?",
     options: [
-      "Skip the section completely and guess the answer.",
-      "Reread the last sentence and identify the cause-and-effect relationship between deep snow and hearing.",
-      "Memorize every word in the paragraph.",
-      "Only read the first sentence of the paragraph."
+      "Look up local speed limits on country backroads to see if the uncle is breaking traffic laws.",
+      "Annotate the detail about 'knuckles turn white' to recognize that the passenger's visible physical tension prompts the uncle's reaction.",
+      "Reread the stanza to memorize the exact driving actions described.",
+      "Visualize a car parked safely in a driveway to understand what 'smooth' means."
     ],
     correct: 1,
-    explanation: "Rereading tricky sentences to identify cause-and-effect helps clear up confusion when meaning breaks down."
+    explanation: "Annotating physical actions like gripping the handle until 'knuckles turn white' reveals the passenger's fear. The uncle asks his question because he notices this physical reaction to his erratic driving."
   },
   {
     level: 2,
-    title: "LV.2 — Word Detective",
-    passage: "The scientist's claims were met with extreme skepticism by the panel; they demanded empirical evidence before accepting any of her unexpected findings.",
-    question: "Based on context clues in the sentence, what is the best definition of 'skepticism'?",
+    title: "LV.2 — Word Detective (Part A/B Context Clues)",
+    passage: "Paragraph 1: When I was assigned the early morning shift, I tried to refuse the schedule. I was determined to win this argument and proved to my boss that I would not be forced into hours I didn't want.\n\nParagraph 2: Standing there, defiant, I told him I wouldn't work weekends. He simply smiled and reminded me that my contract was already signed.",
+    question: "Which group of words from the surrounding text serves as the BEST context clues to help the reader understand the meaning of 'defiant'?",
     options: [
-      "Enthusiastic agreement and praise",
-      "Doubt or disbelief",
-      "Complete indifference",
-      "Immediate acceptance"
+      "'early morning shift,' 'assigned,' and 'contract'",
+      "'refused,' 'determined to win,' and 'would not be forced'",
+      "'standing there,' 'smiled,' and 'reminded me'",
+      "'boss,' 'schedule,' and 'hours'"
     ],
     correct: 1,
-    explanation: "The panel's demand for 'empirical evidence before accepting' shows they held doubt or disbelief."
+    explanation: "'Defiant' means boldly resisting or challenging authority[cite: 2]. Words like 'refused,' 'determined to win,' and 'would not be forced' directly show that resistant attitude in action[cite: 2]."
   },
   {
     level: 3,
-    title: "LV.3 — Dictionary Dash",
-    passage: "Dictionary Entry: draft (verb)\n1. To select for a specific purpose or military service.\n2. To compose or write a preliminary version of a document.\n3. (noun) A current of cool air in a room.\n4. (noun) The depth of water a ship needs to float.",
-    question: "Which definition of 'draft' is used in this sentence: 'The team spent three hours trying to draft the first chapter of their report'?",
+    title: "LV.3 — Dictionary Dash (Multiple Meanings)",
+    passage: "Reading Passage Snippet:\n'After three exhausting months of double shifts, dealing with angry customers, and cleaning late into the night, I felt gritty and real. I had earned every single cent.'\n\nDictionary Entry:\ngritty (adjective)\n1. containing small, rough particles or sand\n2. showing courage, resolve, and toughness of character\n3. unpleasantly dirty or messy\n4. having a harsh, unpleasant texture",
+    question: "As used in the reading snippet, which dictionary definition BEST matches the meaning of 'gritty'?",
     options: [
       "Definition 1",
       "Definition 2",
@@ -40,33 +40,33 @@ const GAME_DATA = [
       "Definition 4"
     ],
     correct: 1,
-    explanation: "Definition 2 refers to writing or composing a preliminary version of a document."
+    explanation: "In this context, 'gritty' describes feeling tough and resilient after working hard through challenging circumstances (Definition 2)[cite: 2]. While the work was messy, the narrator is reflecting on their personal growth and determination[cite: 2]."
   },
   {
     level: 4,
-    title: "LV.4 — Evidence Hunt",
-    passage: "Maya noticed the dark clouds gathering on the horizon and the sudden drop in temperature. She quickly gathered her outdoor gear, secured the lawn furniture, and brought the dog inside.",
-    question: "Which piece of textual evidence best supports the inference that a storm is approaching?",
+    title: "LV.4 — Evidence Hunt (Key Ideas & Inferences)",
+    passage: "When my mother refused to let me buy the designer jacket, I went straight out and got a job at the local diner. I thought I was taking control of my life. But after working five evening shifts a week, maintaining my grades, and spending all my earnings on basic expenses, I realized that independence comes with unexpected burdens.",
+    question: "Which detail from the passage BEST supports the key idea that gaining independence often brings unexpected challenges?",
     options: [
-      "Maya brought the dog inside.",
-      "Maya gathered her outdoor gear.",
-      "Dark clouds gathering on the horizon and a sudden temperature drop.",
-      "Securing the lawn furniture in the yard."
+      "The narrator applied for a job at the local diner.",
+      "The narrator's mother refused to purchase the designer jacket.",
+      "The narrator realized independence required balancing five work shifts with grades and expenses.",
+      "The narrator wanted to take control of their own decisions."
     ],
     correct: 2,
-    explanation: "Dark clouds and a sudden drop in temperature are direct environmental evidence of an incoming storm."
+    explanation: "Option C directly highlights the unexpected reality and difficult burden of balancing work, school, and expenses that came with earning their own freedom[cite: 2]."
   },
   {
     level: 5,
-    title: "LV.5 — Sentence Sort",
-    passage: "Determine whether the statement below is a complete sentence or a sentence fragment.",
-    question: "'Running through the rain without an umbrella or rain jacket.'",
+    title: "LV.5 — Sentence Sort (Structure Analysis)",
+    passage: "Examine the following statement carefully:\n\n'Submerged up to my knees in soapy water while scrubbing the restaurant floor.'",
+    question: "Determine whether the statement above is a complete sentence or a sentence fragment.",
     options: [
       "Complete Sentence",
       "Sentence Fragment"
     ],
     correct: 1,
-    explanation: "This is a fragment because it lacks a subject performing the action."
+    explanation: "This is a Sentence Fragment[cite: 2]. Although it contains action ('submerged,' 'scrubbing'), it lacks a subject performing the verb (e.g., 'I was submerged...') to express a complete thought[cite: 2]."
   }
 ];
 
@@ -76,7 +76,7 @@ let lives = 3;
 let timer = null;
 let timeLeft = 30;
 
-// --- DOM Elements ---
+// --- DOM Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('start-btn');
   if (startBtn) {
@@ -130,8 +130,8 @@ function loadQuestion() {
 
     <!-- Passage Box -->
     <div class="cq-passage">
-      <h3>Reading Passage</h3>
-      <p>${data.passage}</p>
+      <h3>Reading Passage / Text Snippet</h3>
+      <p style="white-space: pre-line;">${data.passage}</p>
     </div>
 
     <!-- Question Card -->
@@ -185,7 +185,7 @@ function selectOption(selectedIndex) {
     buttons[selectedIndex].classList.add('correct');
     feedbackArea.innerHTML = `
       <div class="cq-feedback correct">
-        <div class="cq-feedback-head">✓ Correct!</div>
+        <div class="cq-feedback-head">✓ Correct Strategy!</div>
         <p>${data.explanation}</p>
         <button class="cq-btn cq-next-btn" onclick="nextQuestion()">Next Level →</button>
       </div>
@@ -199,7 +199,7 @@ function selectOption(selectedIndex) {
       feedbackArea.innerHTML = `
         <div class="cq-feedback wrong">
           <div class="cq-feedback-head">✗ Incorrect</div>
-          <p>${data.explanation}</p>
+          <p><b>Rationale:</b> ${data.explanation}</p>
           <button class="cq-btn cq-next-btn" onclick="showEndScreen(false)">Game Over</button>
         </div>
       `;
@@ -207,7 +207,7 @@ function selectOption(selectedIndex) {
       feedbackArea.innerHTML = `
         <div class="cq-feedback wrong">
           <div class="cq-feedback-head">✗ Incorrect</div>
-          <p>${data.explanation}</p>
+          <p><b>Rationale:</b> ${data.explanation}</p>
           <button class="cq-btn cq-next-btn" onclick="nextQuestion()">Continue →</button>
         </div>
       `;
@@ -232,7 +232,7 @@ function handleTimeout() {
     feedbackArea.innerHTML = `
       <div class="cq-feedback wrong">
         <div class="cq-feedback-head">⏰ Time's Up!</div>
-        <p>${data.explanation}</p>
+        <p><b>Rationale:</b> ${data.explanation}</p>
         <button class="cq-btn cq-next-btn" onclick="showEndScreen(false)">Game Over</button>
       </div>
     `;
@@ -240,7 +240,7 @@ function handleTimeout() {
     feedbackArea.innerHTML = `
       <div class="cq-feedback wrong">
         <div class="cq-feedback-head">⏰ Time's Up!</div>
-        <p>${data.explanation}</p>
+        <p><b>Rationale:</b> ${data.explanation}</p>
         <button class="cq-btn cq-next-btn" onclick="nextQuestion()">Continue →</button>
       </div>
     `;
@@ -262,7 +262,7 @@ function showEndScreen(won) {
   if (!container) return;
 
   const title = won ? "QUEST COMPLETE!" : "GAME OVER";
-  const sub = won ? "Mastery achieved across all reading skill modules!" : "Nice try! Review the concepts and try again.";
+  const sub = won ? "Mastery achieved across all Unit 1 reading skill modules!" : "Review the reading adjustment strategies and try again.";
 
   container.innerHTML = `
     <div class="cq-center">
