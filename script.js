@@ -13,7 +13,7 @@ const GAME_DATA = [
     ],
     correct: 1,
     correctRationale: "Great reading move! Annotating the narrator's physical reaction ('knuckles ache') shows their intense fear. The grandfather asks his question specifically because he notices that fear during the rough sail.",
-    incorrectRationale: "Not quite. Option A and D rely on outside facts or calm visuals that ignore the current action. Option C focuses on sound/rhyme rather than meaning. Annotating the narrator's physical reaction (knuckles aching) reveals the fear that prompted the grandfather's question."
+    incorrectRationale: "Not quite. Options A and D rely on outside facts or calm visuals that ignore the current action. Option C focuses on sound/rhyme rather than meaning. Annotating the narrator's physical reaction (knuckles aching) reveals the fear that prompted the grandfather's question."
   },
   {
     level: 2,
@@ -79,7 +79,7 @@ let currentLevelIndex = 0;
 let score = 0;
 let lives = 3;
 let timer = null;
-let timeLeft = 60; // Set initial default timer to 60 seconds
+let timeLeft = 60; // Standard 60s allocation
 
 // --- DOM Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -111,7 +111,7 @@ function loadQuestion() {
   }
 
   const data = GAME_DATA[currentLevelIndex];
-  timeLeft = 60; // Enforce 60 seconds per level load
+  timeLeft = 60; // Reset timer for new level
 
   container.innerHTML = `
     <!-- HUD -->
