@@ -238,7 +238,7 @@ const GAME_DATA = [
 
 let currentLevelIndex = 0;
 let score = 0;
-let lives = 3;
+let lives = 5; // Updated to 5 lives for the 15-question set
 let timer = null;
 let timeLeft = 60;
 
@@ -258,7 +258,7 @@ function startGame() {
   
   currentLevelIndex = 0;
   score = 0;
-  lives = 3;
+  lives = 5; // Set lives to 5 at start
   loadQuestion();
 }
 
@@ -272,7 +272,7 @@ function loadQuestion() {
   }
 
   const data = GAME_DATA[currentLevelIndex];
-  timeLeft = 60; // Reset timer for new level
+  timeLeft = 60;
 
   container.innerHTML = `
     <!-- HUD -->
@@ -414,7 +414,9 @@ function showEndScreen(won) {
   if (!container) return;
 
   const title = won ? "QUEST COMPLETE!" : "GAME OVER";
-  const sub = won ? "You successfully applied key reading strategies across all 15 test questions!" : "Review your strategies and give it another shot.";
+  const sub = won 
+    ? "You successfully applied key reading strategies across all 15 test questions!" 
+    : "You ran out of lives! Review your strategies and give it another shot.";
 
   container.innerHTML = `
     <div class="cq-center">
