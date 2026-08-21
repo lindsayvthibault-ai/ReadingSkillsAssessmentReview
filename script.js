@@ -79,7 +79,7 @@ let currentLevelIndex = 0;
 let score = 0;
 let lives = 3;
 let timer = null;
-let timeLeft = 60;
+let timeLeft = 60; // Set initial default timer to 60 seconds
 
 // --- DOM Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -111,7 +111,7 @@ function loadQuestion() {
   }
 
   const data = GAME_DATA[currentLevelIndex];
-  timeLeft = 60;
+  timeLeft = 60; // Enforce 60 seconds per level load
 
   container.innerHTML = `
     <!-- HUD -->
@@ -123,7 +123,7 @@ function loadQuestion() {
         <i data-lucide="trophy" style="color:#FFC857;"></i> Score: ${score}
       </div>
       <div class="cq-hud-item">
-        <i data-lucide="clock" style="color:#5CE7DE;"></i> Time: <span id="timer-display">${timeLeft}s</span>
+        <i data-lucide="clock" style="color:#5CE7DE;"></i> Time: <span id="timer-display">60s</span>
       </div>
     </div>
 
