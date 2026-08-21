@@ -1,38 +1,38 @@
-// --- Game Data Aligned to 8th Grade Unit 1 Assessment ---
+// --- Game Data Aligned to 8th Grade Unit 1 Assessment (Original Texts) ---
 const GAME_DATA = [
   {
     level: 1,
     title: "LV.1 — Fix the Confusion (Poetry Adjustment)",
-    passage: "My uncle drives the backroads like he's outrunning time itself—flooring the pedal through every straightaway, slamming the brakes at every bend, never holding a steady speed.\n\nWhen you grip the door handle until your knuckles turn white, he just laughs and asks, 'Who told you life was supposed to be a smooth ride?'",
-    question: "A reader is confused by the uncle's final question. Which adjustment strategy BEST helps the reader understand why the uncle asks this?",
+    passage: "Tacking Against the Wind\n\nMy grandfather handles the tiller\nthe way he takes on life,\nhauls the mainsheet tight,\nleans hard into the swell,\nspray flying, wind howling—\nhold on, let go, hold on, let go—\nWhen you clutch the wooden gunwale until your knuckles ache,\nhe cuts a sharp look through the mist:\nWho promised you calm seas every time we set sail?",
+    question: "A reader is confused by the grandfather's final question in the poem. Which adjustment strategy BEST helps the reader understand why he asks it?",
     options: [
-      "Look up local speed limits on country backroads to see if the uncle is breaking traffic laws.",
-      "Annotate the detail about 'knuckles turn white' to recognize that the passenger's visible physical tension prompts the uncle's reaction.",
-      "Reread the stanza to memorize the exact driving actions described.",
-      "Visualize a car parked safely in a driveway to understand what 'smooth' means."
+      "Look up Coast Guard safety regulations to determine if sailing in choppy water is legal.",
+      "Annotate the action of 'clutching the wooden gunwale' to recognize that the narrator's visible physical fear prompts the grandfather's question.",
+      "Reread the poem out loud to memorize the rhyme scheme and line lengths.",
+      "Visualize a boat tied up at a quiet harbor dock to understand what calm seas look like."
     ],
     correct: 1,
-    explanation: "Annotating physical actions like gripping the handle until 'knuckles turn white' reveals the passenger's fear. The uncle asks his question because he notices this physical reaction to his erratic driving."
+    explanation: "Annotating the physical action of clutching the gunwale until knuckles ache reveals the narrator's intense fear[cite: 2]. The grandfather asks his question in response to seeing that physical tension during the rough ride[cite: 2]."
   },
   {
     level: 2,
     title: "LV.2 — Word Detective (Part A/B Context Clues)",
-    passage: "Paragraph 1: When I was assigned the early morning shift, I tried to refuse the schedule. I was determined to win this argument and proved to my boss that I would not be forced into hours I didn't want.\n\nParagraph 2: Standing there, defiant, I told him I wouldn't work weekends. He simply smiled and reminded me that my contract was already signed.",
-    question: "Which group of words from the surrounding text serves as the BEST context clues to help the reader understand the meaning of 'defiant'?",
+    passage: "Paragraph 1: When the committee demanded that I simplify my mural design, I stood my ground. I had worked too hard on the composition to let them strip away its meaning, and I refused to yield to their pressure.\n\nParagraph 2: Standing before the review board, resolute, I defended every brushstroke. The chairperson smiled faintly and reminded me that the wall belonged to the school, not to me.",
+    question: "Which group of phrases from the surrounding text serves as the BEST context clues to help the reader understand the meaning of 'resolute'?",
     options: [
-      "'early morning shift,' 'assigned,' and 'contract'",
-      "'refused,' 'determined to win,' and 'would not be forced'",
-      "'standing there,' 'smiled,' and 'reminded me'",
-      "'boss,' 'schedule,' and 'hours'"
+      "'mural design,' 'composition,' and 'brushstroke'",
+      "'stood my ground,' 'refused to yield,' and 'defended every brushstroke'",
+      "'standing before,' 'smiled faintly,' and 'reminded me'",
+      "'committee,' 'review board,' and 'chairperson'"
     ],
     correct: 1,
-    explanation: "'Defiant' means boldly resisting or challenging authority[cite: 2]. Words like 'refused,' 'determined to win,' and 'would not be forced' directly show that resistant attitude in action[cite: 2]."
+    explanation: "'Resolute' means admirably purposeful, determined, and unwavering[cite: 2]. Words like 'stood my ground,' 'refused to yield,' and 'defended every brushstroke' directly illustrate that firm determination[cite: 2]."
   },
   {
     level: 3,
     title: "LV.3 — Dictionary Dash (Multiple Meanings)",
-    passage: "Reading Passage Snippet:\n'After three exhausting months of double shifts, dealing with angry customers, and cleaning late into the night, I felt gritty and real. I had earned every single cent.'\n\nDictionary Entry:\ngritty (adjective)\n1. containing small, rough particles or sand\n2. showing courage, resolve, and toughness of character\n3. unpleasantly dirty or messy\n4. having a harsh, unpleasant texture",
-    question: "As used in the reading snippet, which dictionary definition BEST matches the meaning of 'gritty'?",
+    passage: "Reading Passage Snippet:\n'Stepping onto the empty stage after the chaotic dress rehearsal, the sixteen-year-old stage manager realized she couldn't rely on luck. By opening night, after solving dozens of technical failures, she felt seasoned.'\n\nDictionary Entry:\nseasoned (adjective)\n1. treated or aged for use (such as timber or wood)\n2. matured or experienced through practice and discipline\n3. flavored or enhanced with salt, herbs, or spices\n4. dried thoroughly to prevent warping",
+    question: "As used in the reading snippet, which dictionary definition BEST matches the meaning of 'seasoned'?",
     options: [
       "Definition 1",
       "Definition 2",
@@ -40,33 +40,33 @@ const GAME_DATA = [
       "Definition 4"
     ],
     correct: 1,
-    explanation: "In this context, 'gritty' describes feeling tough and resilient after working hard through challenging circumstances (Definition 2)[cite: 2]. While the work was messy, the narrator is reflecting on their personal growth and determination[cite: 2]."
+    explanation: "In this context, 'seasoned' describes someone who has gained experience and capability by working through difficult challenges (Definition 2)[cite: 2]."
   },
   {
     level: 4,
     title: "LV.4 — Evidence Hunt (Key Ideas & Inferences)",
-    passage: "When my mother refused to let me buy the designer jacket, I went straight out and got a job at the local diner. I thought I was taking control of my life. But after working five evening shifts a week, maintaining my grades, and spending all my earnings on basic expenses, I realized that independence comes with unexpected burdens.",
-    question: "Which detail from the passage BEST supports the key idea that gaining independence often brings unexpected challenges?",
+    passage: "Determined to prove I was ready for the mountain expedition, I spent four weeks hauling a fifty-pound pack through the heat. I imagined reaching the summit would feel like pure triumph. But when torrential rain soaked my gear on night three and my boots fell apart miles from camp, I learned that true endurance isn't about reaching the top—it's about pushing through the misery when everything goes wrong.",
+    question: "Which detail from the passage BEST supports the key idea that growth comes from confronting unexpected hardship?",
     options: [
-      "The narrator applied for a job at the local diner.",
-      "The narrator's mother refused to purchase the designer jacket.",
-      "The narrator realized independence required balancing five work shifts with grades and expenses.",
-      "The narrator wanted to take control of their own decisions."
+      "The narrator spent four weeks training with a fifty-pound pack.",
+      "The narrator envisioned that reaching the summit would feel like pure triumph.",
+      "The narrator pushed through miles of soaked gear and ruined boots far from camp.",
+      "The narrator decided to sign up for a mountain expedition."
     ],
     correct: 2,
-    explanation: "Option C directly highlights the unexpected reality and difficult burden of balancing work, school, and expenses that came with earning their own freedom[cite: 2]."
+    explanation: "Option C directly highlights the real, unexpected hardship (ruined gear and broken boots miles from camp) that taught the narrator the true meaning of endurance[cite: 2]."
   },
   {
     level: 5,
     title: "LV.5 — Sentence Sort (Structure Analysis)",
-    passage: "Examine the following statement carefully:\n\n'Submerged up to my knees in soapy water while scrubbing the restaurant floor.'",
+    passage: "Examine the following statement carefully:\n\n'Trudging through three miles of thick mud with a heavy wooden frame on my shoulders.'",
     question: "Determine whether the statement above is a complete sentence or a sentence fragment.",
     options: [
       "Complete Sentence",
       "Sentence Fragment"
     ],
     correct: 1,
-    explanation: "This is a Sentence Fragment[cite: 2]. Although it contains action ('submerged,' 'scrubbing'), it lacks a subject performing the verb (e.g., 'I was submerged...') to express a complete thought[cite: 2]."
+    explanation: "This is a Sentence Fragment[cite: 2]. Although it contains action words ('trudging'), it lacks a clear subject performing the main action (e.g., 'We were trudging...') to form a complete thought[cite: 2]."
   }
 ];
 
